@@ -8,13 +8,15 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #f5f5f5;
+  background-color: #fff;
 }
 
 header {
-  background-color: #f9f9f9;
+  background-color: #fff;
   border-bottom: 1px solid #e0e0e0;
   padding: 20px 0;
+  position: sticky;
+  top: 0;
 }
 
 .header-container {
@@ -27,37 +29,41 @@ header {
 }
 
 .header-left {
-  font-size: 14px;
-  line-height: 1.4;
+  font-size: 12px;
+  line-height: 1.5;
   color: #666;
+  flex: 0 0 auto;
 }
 
 .header-left h1 {
-  font-size: 20px;
-  margin-bottom: 5px;
+  font-size: 14px;
+  margin-bottom: 3px;
   color: #222;
+  font-weight: 600;
 }
 
 .header-right {
   display: flex;
-  gap: 30px;
+  gap: 25px;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .nav-link {
   text-decoration: none;
   color: #666;
-  font-size: 14px;
-  padding: 8px 12px;
-  border-radius: 4px;
-  transition: all 0.3s ease;
+  font-size: 13px;
+  padding: 5px 8px;
+  border-radius: 3px;
+  transition: all 0.2s ease;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  white-space: nowrap;
 }
 
 .nav-link:hover {
-  background-color: #e8e8e8;
+  background-color: #f5f5f5;
   color: #333;
 }
 
@@ -67,41 +73,44 @@ header {
 }
 
 .nav-link .icon {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
+  max-width: 100%;
+  margin: 0;
+  padding: 60px 20px;
+  background-color: #fff;
+  min-height: calc(100vh - 200px);
 }
 
 .container {
-  background-color: white;
-  border-radius: 0;
-  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 28px;
   text-align: center;
   color: #333;
-  margin-bottom: 15px;
-  font-weight: 500;
+  margin-bottom: 12px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
   color: #666;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   font-weight: 400;
 }
 
 .alert {
   background-color: #ffebee;
   border-left: 4px solid #c62828;
-  padding: 20px;
+  padding: 16px 20px;
   margin: 20px 0;
   border-radius: 0;
 }
@@ -113,7 +122,7 @@ h3 {
 
 .info-box {
   background-color: #ffebee;
-  padding: 25px;
+  padding: 20px;
   margin: 20px 0;
   border-radius: 0;
   border-left: 4px solid #c62828;
@@ -121,9 +130,15 @@ h3 {
 
 .info-box h4 {
   color: #c62828;
-  font-size: 14px;
+  font-size: 13px;
   margin-bottom: 10px;
-  font-weight: 600;
+  font-weight: 700;
+}
+
+.info-box p {
+  color: #333;
+  font-size: 13px;
+  margin: 10px 0;
 }
 
 .info-box ul {
@@ -131,42 +146,43 @@ h3 {
 }
 
 .info-box li {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   color: #333;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.6;
 }
 
 .info-box strong {
   color: #c62828;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .instruction-text {
   text-align: center;
   color: #666;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   font-size: 14px;
 }
 
 .transfer-form {
   background-color: #fff;
-  border: 1px solid #e0e0e0;
-  padding: 30px;
-  border-radius: 0;
+  border: 1px solid #ddd;
+  padding: 35px 40px;
+  border-radius: 2px;
   max-width: 600px;
   margin: 0 auto;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .form-group label {
   display: block;
   margin-bottom: 8px;
   color: #333;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
 }
 
@@ -175,12 +191,13 @@ h3 {
 .form-group input[type="file"],
 .form-group select {
   width: 100%;
-  padding: 12px;
+  padding: 10px 12px;
   border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 14px;
+  border-radius: 3px;
+  font-size: 13px;
   color: #333;
   font-family: inherit;
+  background-color: #fff;
 }
 
 .form-group input[type="text"]:focus,
@@ -198,11 +215,11 @@ h3 {
   background-color: #4caf50;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 3px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease;
 }
 
 .btn-submit:hover {
@@ -211,35 +228,37 @@ h3 {
 
 .search-form {
   background-color: #fff;
-  border: 1px solid #e0e0e0;
-  padding: 30px;
-  border-radius: 0;
+  border: 1px solid #ddd;
+  padding: 35px 40px;
+  border-radius: 2px;
   max-width: 600px;
   margin: 0 auto 30px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
 .search-results {
   background-color: #fff;
-  border: 1px solid #e0e0e0;
-  padding: 30px;
-  border-radius: 0;
+  border: 1px solid #ddd;
+  padding: 35px 40px;
+  border-radius: 2px;
 }
 
 .result-field {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .result-field strong {
   color: #333;
   font-weight: 600;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
+  font-size: 13px;
 }
 
 .result-value {
   color: #666;
-  font-size: 14px;
-  padding-left: 15px;
+  font-size: 13px;
+  padding-left: 0;
 }
 
 footer {
@@ -248,7 +267,7 @@ footer {
   text-align: center;
   padding: 20px;
   font-size: 12px;
-  margin-top: 40px;
+  margin-top: 0;
 }
 
 @media (max-width: 768px) {
@@ -257,23 +276,24 @@ footer {
   }
 
   .header-right {
-    margin-top: 15px;
+    margin-top: 12px;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
     width: 100%;
+    justify-content: flex-start;
   }
 
-  .container {
-    padding: 20px;
+  main {
+    padding: 30px 15px;
   }
 
   h2 {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .transfer-form,
   .search-form,
   .search-results {
-    padding: 20px;
+    padding: 20px 15px;
   }
 }
