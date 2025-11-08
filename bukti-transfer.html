@@ -16,9 +16,9 @@
                 Jakarta 12530</p>
             </div>
             <nav class="header-right">
-                <a href="index.html" class="nav-link"><span class="icon">📝</span>Daftar Antrian</a>
-                <a href="search.html" class="nav-link"><span class="icon">🔍</span>Cek Antrian</a>
-                <a href="bukti-transfer.html" class="nav-link active"><span class="icon">📄</span>Bukti Transfer</a>
+                <a href="index.html" class="nav-link">👤 Daftar Antrian</a>
+                <a href="search.html" class="nav-link">🔍 Cek Antrian</a>
+                <a href="bukti-transfer.html" class="nav-link active">📋 Bukti Transfer</a>
             </nav>
         </div>
     </header>
@@ -30,7 +30,7 @@
 
             <p class="instruction-text">Silahkan isi jika sudah melakukan pembayaran.</p>
 
-            <form class="transfer-form">
+            <form class="transfer-form" onsubmit="submitTransfer(event)">
                 <div class="form-group">
                     <label for="customer-name">Nama customer (Sesuai Faktur)</label>
                     <input type="text" id="customer-name" name="customer-name" required>
@@ -52,9 +52,15 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Butik Emas LM ANTAM. All rights reserved.</p>
+        <p>&copy; 2025 Butik Emas LM ANTAM - TB Simatupang. All rights reserved.</p>
     </footer>
 
     <script src="js/script.js"></script>
+    <script>
+        function submitTransfer(event) {
+            event.preventDefault();
+            alert('Bukti transfer Anda telah diterima. Terima kasih!');
+        }
+    </script>
 </body>
 </html>
