@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BELM - Bukti Transfer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <h1>Butik Emas LM ANTAM - TB Simatupang</h1>
+                <p>Jl. TB Simatupang No.1, RT.10/RW.4,<br>
+                Tj. Bar., Kec. Jagakarsa, Kota Jakarta Selatan,<br>
+                Jakarta 12530</p>
+            </div>
+            <nav class="header-right">
+                <a href="index.html" class="nav-link"><span class="icon">📝</span>Daftar Antrian</a>
+                <a href="search.html" class="nav-link"><span class="icon">🔍</span>Cek Antrian</a>
+                <a href="bukti-transfer.html" class="nav-link active"><span class="icon">📄</span>Bukti Transfer</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Bukti Transfer</h2>
+            <h3>Butik Emas LM ANTAM - TB Simatupang</h3>
+
+            <p class="instruction-text">Silahkan isi jika sudah melakukan pembayaran.</p>
+
+            <form class="transfer-form">
+                <div class="form-group">
+                    <label for="customer-name">Nama customer (Sesuai Faktur)</label>
+                    <input type="text" id="customer-name" name="customer-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="transfer-amount">Nominal Transfer (Rupiah)</label>
+                    <input type="number" id="transfer-amount" name="transfer-amount" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="transfer-proof">Bukti Tranfer Bank</label>
+                    <input type="file" id="transfer-proof" name="transfer-proof" accept="image/*,.pdf">
+                </div>
+
+                <button type="submit" class="btn-submit">Kirim</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Butik Emas LM ANTAM. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
