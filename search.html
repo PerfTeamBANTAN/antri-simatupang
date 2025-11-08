@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Antrian - BELM</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-section">
+                <h1>Butik Emas LM ANTAM – TB Simatupang</h1>
+                <p class="address">Jl. TB Simatupang No.1, RT.10/RW.4, Tj. Bar., Kec. Jagakarsa, Kota Jakarta Selatan, Jakarta 12530</p>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-item">
+                    <span class="icon">📝</span> Daftar Antrian
+                </a>
+                <a href="search.html" class="nav-item active">
+                    <span class="icon">🔍</span> Cek Antrian
+                </a>
+                <a href="bukti-transfer.html" class="nav-item">
+                    <span class="icon">📄</span> Bukti Transfer
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2 class="page-title">Cek Antrian</h2>
+            <h3 class="store-name">Butik Emas LM ANTAM - TB Simatupang</h3>
+
+            <div class="search-section">
+                <p class="info-text">Masukkan kode antrian Anda untuk mengecek status antrian</p>
+                
+                <div class="search-form">
+                    <input type="text" id="queueCode" placeholder="Masukkan Kode Antrian Anda" class="input-field">
+                    <button onclick="searchQueue()" class="btn-search">Cari</button>
+                </div>
+
+                <div id="searchResult" class="search-result hidden">
+                    <div class="result-card">
+                        <h4>Status Antrian Anda:</h4>
+                        <p><strong>Kode Antrian:</strong> <span id="resultCode"></span></p>
+                        <p><strong>Status:</strong> <span id="resultStatus" class="status-badge"></span></p>
+                        <p><strong>Waktu Pendaftaran:</strong> <span id="resultTime"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Butik Emas LM ANTAM - TB Simatupang. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        function searchQueue() {
+            const code = document.getElementById('queueCode').value;
+            const resultDiv = document.getElementById('searchResult');
+            
+            if (code.trim() === '') {
+                alert('Silakan masukkan kode antrian');
+                return;
+            }
+            
+            // Simulasi hasil pencarian
+            document.getElementById('resultCode').textContent = code;
+            document.getElementById('resultStatus').textContent = 'Menunggu';
+            document.getElementById('resultTime').textContent = new Date().toLocaleString('id-ID');
+            
+            resultDiv.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
